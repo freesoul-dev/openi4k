@@ -5,7 +5,7 @@ import { Video, SlidersHorizontal, User } from 'lucide-react';
 import { AboutModal } from '@/components/about-modal';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import VideoFeed from '@/components/video/video-feed';
 import { ALL_CATEGORIES, videos as allVideos, type VideoCategory } from '@/lib/data';
 
@@ -24,17 +24,21 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-2 md:gap-4">
             <div className="hidden md:block">
-              <Select onValueChange={(value: VideoCategory | 'All') => setCategory(value)} defaultValue="All">
-                <SelectTrigger className="w-[180px]">
-                  <SlidersHorizontal className="h-4 w-4 mr-2" />
-                  <SelectValue placeholder="Filter by category" />
-                </SelectTrigger>
-                <SelectContent>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <SlidersHorizontal className="h-5 w-5 text-foreground" />
+                    <span className="sr-only">Filter by category</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
                   {['All', ...ALL_CATEGORIES].map(cat => (
-                    <SelectItem key={cat} value={cat}>{cat}</SelectItem>
+                    <DropdownMenuItem key={cat} onSelect={() => setCategory(cat as VideoCategory | 'All')}>
+                      {cat}
+                    </DropdownMenuItem>
                   ))}
-                </SelectContent>
-              </Select>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
             <AboutModal>
               <Button variant="ghost" size="icon">
@@ -49,18 +53,22 @@ export default function Home() {
 
       <VideoFeed videos={videos} />
 
-      <footer className="absolute bottom-0 left-0 right-0 z-20 p-4 md:hidden bg-gradient-to-t from-background/50 to-transparent">
-          <Select onValueChange={(value: VideoCategory | 'All') => setCategory(value)} defaultValue="All">
-              <SelectTrigger className="w-full">
-                <SlidersHorizontal className="h-4 w-4 mr-2" />
-                <SelectValue placeholder="Filter by category" />
-              </SelectTrigger>
-              <SelectContent>
-                {['All', ...ALL_CATEGORIES].map(cat => (
-                  <SelectItem key={cat} value={cat}>{cat}</SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+      <footer className="absolute bottom-0 left-0 right-0 z-20 p-4 flex justify-center md:hidden bg-gradient-to-t from-background/50 to-transparent">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="bg-black/30 hover:bg-black/50 text-white rounded-full h-12 w-12">
+                <SlidersHorizontal className="h-5 w-5" />
+                <span className="sr-only">Filter by category</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              {['All', ...ALL_CATEGORIES].map(cat => (
+                <DropdownMenuItem key={cat} onSelect={() => setCategory(cat as VideoCategory | 'All')}>
+                  {cat}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
       </footer>
     </div>
   );
