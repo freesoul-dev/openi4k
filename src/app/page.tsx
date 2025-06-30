@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { Video, SlidersHorizontal, User } from 'lucide-react';
+import { SlidersHorizontal, User } from 'lucide-react';
 import { AboutModal } from '@/components/about-modal';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
@@ -17,11 +17,7 @@ export default function Home() {
   return (
     <div className="relative h-screen w-screen overflow-hidden bg-background font-body">
       <header className="absolute top-0 left-0 right-0 z-20 p-4">
-        <div className="container mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Video className="h-8 w-8 text-primary" />
-            <h1 className="text-2xl font-bold font-headline text-foreground">@jane_doe</h1>
-          </div>
+        <div className="container mx-auto flex items-center justify-center">
           <div className="flex items-center gap-2 md:gap-4">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
