@@ -25,20 +25,3 @@ export default function VideoFeed({ videos }: VideoFeedProps) {
     </main>
   );
 }
-
-// A utility class to hide scrollbars, add to a global stylesheet if needed more widely
-const scrollbarHide = `
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-`;
-if (typeof document !== 'undefined') {
-  const styleSheet = document.createElement("style");
-  styleSheet.type = "text/css";
-  styleSheet.innerText = scrollbarHide;
-  document.head.appendChild(styleSheet);
-}
