@@ -7,6 +7,7 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import Image from 'next/image';
 import type { ReactNode } from 'react';
 
 interface AboutModalProps {
@@ -20,7 +21,15 @@ export function AboutModal({ children }: AboutModalProps) {
         {children}
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
+        <DialogHeader className="items-center text-center">
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={120}
+            height={40}
+            className="mb-4"
+            data-ai-hint="pink logo"
+          />
           <DialogTitle className="font-headline text-2xl text-primary">About @jane_doe</DialogTitle>
           <DialogDescription className="font-body pt-2">
             Welcome to my corner of the internet. I'm a passionate creator exploring the world through video.
