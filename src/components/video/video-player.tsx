@@ -3,7 +3,7 @@
 import { useRef, useEffect, useState } from 'react';
 import type { Video as VideoType } from '@/lib/data';
 import VideoOverlay from './video-overlay';
-import { Play, Pause } from 'lucide-react';
+import { Play } from 'lucide-react';
 
 interface VideoPlayerProps {
   video: VideoType;
@@ -18,17 +18,22 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
     const videoElement = videoRef.current;
     if (!videoElement) return;
 
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+
+    videoElement.addEventListener('play', onPlay);
+    videoElement.addEventListener('pause', onPause);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
+        const target = entry.target as HTMLVideoElement;
         if (entry.isIntersecting) {
-          videoElement.play().then(() => {
-            setIsPlaying(true);
-          }).catch(() => {
-            setIsPlaying(false);
+          // Autoplay is handled here. We catch errors in case the browser blocks it.
+          target.play().catch(error => {
+            console.error("Autoplay prevented for video:", video.src, error);
           });
         } else {
-          videoElement.pause();
-          setIsPlaying(false);
+          target.pause();
         }
       },
       { threshold: 0.6 } // 60% of the video must be visible to play
@@ -38,24 +43,23 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
 
     return () => {
       if (videoElement) {
+        videoElement.removeEventListener('play', onPlay);
+        videoElement.removeEventListener('pause', onPause);
         observer.unobserve(videoElement);
       }
     };
-  }, []);
+  }, [video.src]);
   
   const togglePlay = () => {
     const videoElement = videoRef.current;
     if (videoElement) {
         if (videoElement.paused) {
-            videoElement.play().then(() => {
-              setIsPlaying(true);
-            }).catch(error => {
-              console.error("Error attempting to play video:", error);
-              setIsPlaying(false);
+            // We catch potential errors from programmatic play.
+            videoElement.play().catch(error => {
+              console.error("Error attempting to play video:", video.src, error);
             });
         } else {
             videoElement.pause();
-            setIsPlaying(false);
         }
     }
   }
