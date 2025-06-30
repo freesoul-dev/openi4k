@@ -1,7 +1,6 @@
 import type { Video } from '@/lib/data';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
-import { Heart, MessageCircle } from 'lucide-react';
 import { SharePopover } from './share-popover';
 
 interface VideoOverlayProps {
@@ -25,14 +24,6 @@ export default function VideoOverlay({ video }: VideoOverlayProps) {
           </div>
         </div>
         <div className="flex flex-col items-center gap-4 pointer-events-auto">
-            <Button size="icon" variant="ghost" className="bg-black/30 hover:bg-black/50 text-white rounded-full h-12 w-12">
-                <Heart className="h-6 w-6" />
-                <span className="sr-only">Like</span>
-            </Button>
-            <Button size="icon" variant="ghost" className="bg-black/30 hover:bg-black/50 text-white rounded-full h-12 w-12">
-                <MessageCircle className="h-6 w-6" />
-                <span className="sr-only">Comment</span>
-            </Button>
             <SharePopover>
                 <Button size="icon" variant="ghost" className="bg-black/30 hover:bg-black/50 text-white rounded-full h-12 w-12">
                     <SharePopover.Trigger />
