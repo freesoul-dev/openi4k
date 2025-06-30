@@ -37,7 +37,9 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
     observer.observe(videoElement);
 
     return () => {
-      observer.unobserve(videoElement);
+      if (videoElement) {
+        observer.unobserve(videoElement);
+      }
     };
   }, []);
   
@@ -45,8 +47,12 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
     const videoElement = videoRef.current;
     if (videoElement) {
         if (videoElement.paused) {
-            videoElement.play();
-            setIsPlaying(true);
+            videoElement.play().then(() => {
+              setIsPlaying(true);
+            }).catch(error => {
+              console.error("Error attempting to play video:", error);
+              setIsPlaying(false);
+            });
         } else {
             videoElement.pause();
             setIsPlaying(false);
