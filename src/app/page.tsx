@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { SlidersHorizontal, User } from 'lucide-react';
 import { AboutModal } from '@/components/about-modal';
-import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import VideoFeed from '@/components/video/video-feed';
@@ -40,7 +39,6 @@ export default function Home() {
                 <span className="sr-only">About Me</span>
               </Button>
             </AboutModal>
-            <ThemeToggle />
           </div>
         </div>
       </header>
