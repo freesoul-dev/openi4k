@@ -19,7 +19,7 @@ export default function Home() {
       <header className="absolute top-0 left-0 right-0 z-20 p-4">
         <div className="container mx-auto flex flex-col items-center justify-center gap-4">
           <Image
-            src="https://placehold.co/120x40.png"
+            src="/logo.png"
             alt="Logo"
             width={120}
             height={40}
