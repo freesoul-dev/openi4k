@@ -21,7 +21,7 @@ export function AboutModal({ children }: AboutModalProps) {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle className="font-headline text-2xl text-primary">About nameless.video/</DialogTitle>
+          <DialogTitle className="font-headline text-2xl text-primary">About @jane_doe</DialogTitle>
           <DialogDescription className="font-body pt-2">
             Welcome to my corner of the internet. I'm a passionate creator exploring the world through video.
           </DialogDescription>

@@ -4,8 +4,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'nameless.video/',
-  description: 'An immersive, full-screen video feed experience.',
+  title: "Jane Doe's Video Portfolio",
+  description: "The video portfolio of Jane Doe, a passionate creator.",
 };
 
 export default function RootLayout({

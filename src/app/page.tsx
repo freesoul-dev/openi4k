@@ -20,7 +20,7 @@ export default function Home() {
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Video className="h-8 w-8 text-primary" />
-            <h1 className="text-2xl font-bold font-headline text-foreground">nameless.video/</h1>
+            <h1 className="text-2xl font-bold font-headline text-foreground">@jane_doe</h1>
           </div>
           <div className="flex items-center gap-2 md:gap-4">
             <div className="hidden md:block">
@@ -56,7 +56,7 @@ export default function Home() {
       <footer className="absolute bottom-0 left-0 right-0 z-20 p-4 flex justify-center md:hidden bg-gradient-to-t from-background/50 to-transparent">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="bg-black/30 hover:bg-black/50 text-white rounded-full h-12 w-12">
+              <Button variant="ghost" size="icon" className="hover:bg-black/50 text-white rounded-full h-12 w-12">
                 <SlidersHorizontal className="h-5 w-5" />
                 <span className="sr-only">Filter by category</span>
               </Button>
