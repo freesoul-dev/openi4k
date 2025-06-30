@@ -62,7 +62,7 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
         loop
         muted
         playsInline
-        className="h-full w-full object-cover"
+        className="h-full w-full object-contain"
         preload="auto"
       />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
