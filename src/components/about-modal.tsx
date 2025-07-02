@@ -22,26 +22,30 @@ export function AboutModal({ children }: AboutModalProps) {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader className="items-center text-center">
-          <Image
+          {/* <Image
             src="/logo.png"
             alt="Logo"
             width={120}
             height={40}
             className="mb-4"
             data-ai-hint="pink logo"
-          />
-          <DialogTitle className="font-headline text-2xl text-primary">About @jane_doe</DialogTitle>
+          /> */}
+          <DialogTitle className="font-headline text-2xl text-primary">freesoul.cam/</DialogTitle>
           <DialogDescription className="font-body pt-2">
-            Welcome to my corner of the internet. I'm a passionate creator exploring the world through video.
+            We do video projects for friends and friends of friends. 
+            No social media, our footage goes to our clients only
+            Text (sms only) 917-765-8475 to get in touch.
           </DialogDescription>
         </DialogHeader>
         <div className="py-4 font-body text-sm text-muted-foreground">
-          <p>This is a project showcasing a modern, immersive video feed experience built with Next.js and Tailwind CSS. It features lazy loading for videos, theme toggling, category filtering, and a responsive design inspired by popular social media platforms.</p>
+          <p>
+            {/* Text 917-765-8475 for info. Main cam: Sony A7sIII Drone: DJI Mini Pro 3 */}
+          </p>
         </div>
         <div className="flex items-center justify-center space-x-6 pt-2">
           <a href="#" aria-label="Email" className="text-foreground hover:text-primary transition-colors"><Mail /></a>
-          <a href="#" aria-label="GitHub" className="text-foreground hover:text-primary transition-colors"><Github /></a>
-          <a href="#" aria-label="LinkedIn" className="text-foreground hover:text-primary transition-colors"><Linkedin /></a>
+          {/* <a href="#" aria-label="GitHub" className="text-foreground hover:text-primary transition-colors"><Github /></a> */}
+          {/* <a href="#" aria-label="LinkedIn" className="text-foreground hover:text-primary transition-colors"><Linkedin /></a> */}
         </div>
       </DialogContent>
     </Dialog>
