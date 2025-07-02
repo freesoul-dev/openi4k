@@ -12,7 +12,6 @@ export interface Video {
 export const videos: Video[] = [
     {
         id: '1',
-        // src: '/video/snb_20250615.mp4',
         src: 'https://freesoul-cam.b-cdn.net/snb_20250615.mp4',
         description: 'Slappers and Bangers, June 15th 2025, Pittsburgh, PA',
         category: 'Events',
