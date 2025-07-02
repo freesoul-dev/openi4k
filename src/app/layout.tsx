@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
-  title: "Jane Doe's Video Portfolio",
-  description: "The video portfolio of Jane Doe, a passionate creator.",
+  title: "freesoul.cam/openi4k",
+  description: "Openi4k",
 };
 
 export default function RootLayout({
