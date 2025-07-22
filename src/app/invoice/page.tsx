@@ -6,10 +6,10 @@ import React, { useState, useEffect } from 'react';
 const InvoicePage = () => {
   // State for vendor (your) information
   const [vendorInfo, setVendorInfo] = useState({
-    name: 'Free Research & Development',
+    name: 'Free-World Agency',
     // address: '123 Business Rd, Suite 100',
     // cityStateZip: 'Anytown, CA 90210',
-    email: 'admin@freeresearch.dev',
+    // email: 'admin@freeresearch.dev',
     phone: '(917) 765 8475',
   });
 

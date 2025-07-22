@@ -31,11 +31,9 @@ export function AboutModal({ children }: AboutModalProps) {
             className="mb-4"
             data-ai-hint="pink logo"
           /> */}
-          <DialogTitle className="font-headline text-2xl text-primary">freesoul.cam/</DialogTitle>
+          <DialogTitle className="font-headline text-2xl text-primary">Free-World Agency</DialogTitle>
           <DialogDescription className="font-body pt-2">
-            We do video projects for friends and friends of friends. 
-            No social media, our footage goes to our clients only
-            Text (sms only) 917-765-8475 to get in touch.
+            We are a creative agency offering full-stack solutions for your business or personal brand. 
             <br />
             <p className='text-center text-md font-body'>
               <Link href="/pricing" className='text-primary hover:text-primary/80'>Pricing</Link>

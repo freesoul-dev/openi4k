@@ -4,8 +4,8 @@ import { Toaster } from "@/components/ui/toaster"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
-  title: "freesoul.cam/openi4k",
-  description: "Openi4k",
+  title: "Free-World Agency",
+  description: "Media Design and Development Agency",
 };
 
 export default function RootLayout({
