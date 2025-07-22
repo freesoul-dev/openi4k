@@ -24,6 +24,7 @@ const videoServices: VideoService[] = [
   { name: '4K Filming Rate', rate: '$55 - $70 per hour', notes: 'Sliding scale based on project complexity/duration' },
   { name: 'Drone Fee (DJI Mini 3 Pro)', rate: '$70', notes: 'Flat fee for drone use' },
   { name: '4K Drone Footage', rate: '$50 per hour', notes: 'Hourly rate for 4K aerial footage' },
+  { name: 'Editing (Adobe Premiere Pro or CapCut Pro)', rate: '$35 -  $65 per hour', notes: 'Sliding scale based on project duration' },
 ];
 
 const webServices: WebService[] = [
