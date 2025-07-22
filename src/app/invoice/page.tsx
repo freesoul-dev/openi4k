@@ -145,7 +145,7 @@ const InvoicePage = () => {
             <h1 className="text-4xl font-bold text-gray-800 mb-2">INVOICE</h1>
             <input
               type="text"
-              className="text-sm text-black-600 bg-transparent border-none focus:outline-none focus:ring-0 p-0 m-0"
+              className="text-sm text-gray-600 bg-transparent border-none focus:outline-none focus:ring-0 p-0 m-0"
               value={`# ${invoiceDetails.invoiceNumber}`}
               onChange={(e) => handleInvoiceDetailChange(e, 'invoiceNumber')}
             />
@@ -364,7 +364,7 @@ const InvoicePage = () => {
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-700 mb-2">Notes / Terms:</h3>
           <textarea
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 resize-y"
+            className="w-full p-3 border text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 resize-y"
             rows={4}
             defaultValue="Payment is due within 30 days of the invoice date. Late payments may incur a fee of 1.5% per month."
           ></textarea>
