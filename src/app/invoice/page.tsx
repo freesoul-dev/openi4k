@@ -9,7 +9,7 @@ const InvoicePage = () => {
     name: 'Free Research & Development',
     // address: '123 Business Rd, Suite 100',
     // cityStateZip: 'Anytown, CA 90210',
-    email: 'mail@freesoul.com',
+    email: 'admin@freeresearch.dev',
     phone: '(917) 765 8475',
   });
 
