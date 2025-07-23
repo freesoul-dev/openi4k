@@ -34,8 +34,10 @@ export function AboutModal({ children }: AboutModalProps) {
           <DialogTitle className="font-headline text-2xl text-primary">Free-World Agency</DialogTitle>
           <DialogDescription className="font-body pt-2">
             We are a creative agency offering full-stack solutions for your business or personal brand. 
-            <br />
+            <br /><br />
             <p className='text-center text-md font-body'>
+              <Link href="/services" className='text-primary hover:text-primary/80'>Services</Link>
+              <br /><br />
               <Link href="/pricing" className='text-primary hover:text-primary/80'>Pricing</Link>
             </p>
           </DialogDescription>

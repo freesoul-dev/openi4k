@@ -18,13 +18,13 @@ export default function Home() {
     <div className="relative h-screen w-screen overflow-hidden bg-background font-body">
       <header className="absolute top-0 left-0 right-0 z-20 p-4">
         <div className="container mx-auto flex flex-col items-center justify-center gap-4">
-          {/* <Image
-            src="/logo.png"
+          <Image
+            src="/logo_2.png"
             alt="Logo"
-            width={240}
-            height={80}
+            width={60}
+            height={60}
             data-ai-hint="pink logo"
-          /> */}
+          />
           <div className="flex items-center gap-2 md:gap-4">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
